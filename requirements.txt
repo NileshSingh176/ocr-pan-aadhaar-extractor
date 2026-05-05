@@ -1,0 +1,11 @@
+# Core dependencies for GOT-OCR 2.0 and Hugging Face Vision Models
+torch>=2.0.0
+torchvision
+transformers>=4.40.0
+accelerate
+Pillow
+numpy
+# For Apple Silicon (MacBook Air) support
+sentencepiece
+# For image preprocessing and noise reduction
+opencv-python

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Extractor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📄 Document Information Extractor</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" id="imageInput" required>
+        <button type="submit">Upload & Extract</button>
+    </form>
+
+    <div id="previewBox"></div>
+
+    {% if image_path %}
+
+    <div class="result">
+
+        <h2>Uploaded Image</h2>
+        <img src="{{ url_for('uploaded_file', filename=image_path) }}" width="300">
+
+        <h2>Document Type</h2>
+        <p class="doc">{{ doc_type }}</p>
+
+        <h2>Extracted Details</h2>
+
+        <div class="card">
+            {% for key, value in details.items() %}
+                <p><b>{{ key }}:</b> {{ value }}</p>
+            {% endfor %}
+        </div>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

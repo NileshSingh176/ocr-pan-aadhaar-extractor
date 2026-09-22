@@ -1,0 +1,22 @@
+# -------------------- WEB FRAMEWORK --------------------
+flask>=3.0.0
+
+# -------------------- OCR + AI --------------------
+easyocr
+ultralytics
+torch>=2.0.0
+torchvision
+transformers>=4.40.0
+accelerate
+sentencepiece
+
+# -------------------- IMAGE PROCESSING --------------------
+opencv-python
+Pillow
+numpy
+
+# -------------------- OPTIONAL / PERFORMANCE --------------------
+scipy
+pyyaml
+requests
+matplotlib
